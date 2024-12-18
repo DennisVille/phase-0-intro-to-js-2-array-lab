@@ -13,11 +13,11 @@ function destructivelyRemoveFirstCat(){
     cats.shift();
 }
 function appendCat(name){
-    let cats2 = cats.toSpliced(3,0,name);
+    let cats2 = [...cats,name];
     return cats2;
 }
 function prependCat(name){
-    let cats3 = cats.toSpliced(0,0,name);
+    let cats3 = [name, ...cats];
     return cats3;
 }
 function removeLastCat(){
